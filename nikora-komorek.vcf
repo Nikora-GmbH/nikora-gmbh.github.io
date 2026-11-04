@@ -1,0 +1,8 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Komorek;Nicolai;;;
+FN:Nicolai Komorek
+ORG:Nikora GmbH
+TEL;TYPE=CELL,VOICE:+41793284471
+EMAIL;TYPE=INTERNET,PREF:nicolai.komorek@bluewin.ch
+END:VCARD

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nicolai Komorek — Nikora GmbH</title>
+<meta name="description" content="Kontaktkarte von Nicolai Komorek, Nikora GmbH.">
+<meta name="theme-color" content="#FEFDF8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121210" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Nicolai Komorek — Nikora GmbH">
+<meta property="og:description" content="Kontaktkarte">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FEFDF8'/%3E%3Cpath d='M19 7.6a9 9 0 1 1-6 0' fill='none' stroke='%231A1A1A' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#FEFDF8;
+    --ink:#17171A;
+    --muted:#6B6A64;
+    --hair:rgba(23,23,26,.11);
+    --card:rgba(255,255,255,.55);
+    --logo-filter:none;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#121210;
+      --ink:#F2F0E9;
+      --muted:#9B988E;
+      --hair:rgba(242,240,233,.14);
+      --card:rgba(255,255,255,.04);
+      --logo-filter:invert(1) brightness(1.12);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#121210;
+    --ink:#F2F0E9;
+    --muted:#9B988E;
+    --hair:rgba(242,240,233,.14);
+    --card:rgba(255,255,255,.04);
+    --logo-filter:invert(1) brightness(1.12);
+  }
+
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Inter,Helvetica,Arial,sans-serif;
+    font-size:17px;
+    line-height:1.45;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:calc(40px + env(safe-area-inset-top)) 16px calc(28px + env(safe-area-inset-bottom));
+  }
+
+  main{
+    width:100%;
+    max-width:380px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    animation:rise .7s cubic-bezier(.16,1,.3,1) both;
+  }
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion: reduce){main{animation:none}}
+
+  .logo{
+    width:188px;
+    height:auto;
+    display:block;
+    filter:var(--logo-filter);
+    margin-bottom:34px;
+  }
+
+  h1{
+    font-size:27px;
+    line-height:1.2;
+    font-weight:500;
+    letter-spacing:-.017em;
+    margin:0;
+    text-align:center;
+  }
+  .org{
+    margin:7px 0 0;
+    font-size:15px;
+    letter-spacing:.055em;
+    text-transform:uppercase;
+    color:var(--muted);
+    text-align:center;
+  }
+
+  .save{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    width:100%;
+    margin-top:36px;
+    padding:16px 20px;
+    border-radius:15px;
+    background:var(--ink);
+    color:var(--bg);
+    font-size:17px;
+    font-weight:500;
+    letter-spacing:-.01em;
+    text-decoration:none;
+    transition:transform .18s cubic-bezier(.16,1,.3,1),opacity .18s ease;
+  }
+  .save:active{transform:scale(.975);opacity:.88}
+  .save svg{width:18px;height:18px;flex:none}
+
+  .rows{
+    width:100%;
+    margin-top:14px;
+    border:1px solid var(--hair);
+    border-radius:15px;
+    background:var(--card);
+    overflow:hidden;
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+  }
+  .row{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    padding:15px 18px;
+    color:inherit;
+    text-decoration:none;
+    transition:background .18s ease;
+  }
+  .row + .row{border-top:1px solid var(--hair)}
+  .row:active{background:var(--hair)}
+  .row svg{width:17px;height:17px;flex:none;color:var(--muted)}
+  .row .val{
+    flex:1;
+    min-width:0;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    font-size:16.5px;
+    letter-spacing:-.006em;
+  }
+  .row .chev{width:13px;height:13px;color:var(--muted);opacity:.55}
+
+  footer{
+    margin-top:30px;
+    font-size:12.5px;
+    letter-spacing:.045em;
+    text-transform:uppercase;
+    color:var(--muted);
+    opacity:.72;
+    text-align:center;
+  }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="logo.png" alt="Nikora" width="900" height="533">
+
+  <h1>Nicolai Komorek</h1>
+  <p class="org">Nikora GmbH</p>
+
+  <a class="save" href="nikora-komorek.vcf" type="text/vcard">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 5v14M5 12h14"/>
+    </svg>
+    Zu Kontakten hinzufügen
+  </a>
+
+  <div class="rows">
+    <a class="row" href="tel:+41793284471">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>
+      </svg>
+      <span class="val">+41 79 328 44 71</span>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+    </a>
+    <a class="row" href="mailto:nicolai.komorek@bluewin.ch">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="2" y="4.5" width="20" height="15" rx="2.5"/><path d="m2.6 6.4 8.3 5.8c.66.46 1.54.46 2.2 0l8.3-5.8"/>
+      </svg>
+      <span class="val">nicolai.komorek@bluewin.ch</span>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+    </a>
+  </div>
+
+  <footer>Nikora GmbH · Schweiz</footer>
+</main>
+</body>
+</html>
